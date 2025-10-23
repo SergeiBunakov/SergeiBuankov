@@ -1,0 +1,92 @@
+@import "/reset.css";
+
+:root {
+	--visual-sz-unit: 1rem;
+
+	--default-font-family: "Instrument Sans", sans-serif;
+	--default-font-optical-sizing: auto;
+	--default-font-weight: 400;
+	--default-font-style: normal;
+	--default-font-variation-settings: "wdth" 100;
+
+	--fs-1: 2rem;
+	--fs-2: 1.5rem;
+	--fs-3: 1.3rem;
+	--fs-4: 1rem;
+	--fs-5: 0.8rem;
+	--fs-6: 0.7rem;
+
+	--border-radius: 16px;
+	--border-circle: 50%;
+
+	--side-panel-width: 15vw;
+
+	--bg-color: rgba(14, 32, 36, 1);
+	--side-panel-bg-color: rgba(53, 68, 72, 1);
+	--main-panel-bg-color: rgba(158, 184, 188, 1);
+
+	--light-color: #D0D3D4;
+}
+
+*, html, body {
+	font-family: var(--default-font-family);
+	font-size: var(--fs-4);
+}
+
+body {
+	background-color: var(--bg-color);
+}
+
+header {
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	padding: 0 var(--visual-sz-unit);
+
+	font-size: var(--fs-1);
+	color: var(--light-color);
+}
+
+site-wrapper {
+	min-height: 90vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	gap: var(--visual-sz-unit);
+	padding-right: var(--visual-sz-unit);
+}
+
+panel {
+	border-radius:  var(--border-radius);
+}
+
+panel.main-panel {
+	width: calc(100% - var(--side-panel-width) - var(--visual-sz-unit));
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+
+	background-color: var(--main-panel-bg-color);
+}
+
+panel.side-panel {
+	min-width: var(--side-panel-width);
+	max-width: var(--side-panel-width);
+
+	height: fit-content;
+	min-height: 60vh;
+	position: fixed;
+	right: var(--visual-sz-unit);
+
+	background-color: var(--side-panel-bg-color);
+}
+
+footer {
+	height: 10vh;
+}
