@@ -213,6 +213,56 @@ panel.side > .title {
     font-style: italic;
 }
 
+panel.side .details {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: max-content minmax(0,1fr);
+    column-gap: calc(var(--visual-sz-unit) * 0.6);
+    row-gap: calc(var(--visual-sz-unit) * 0.6);
+    align-items: start;
+}
+
+panel.side .details li {
+    display: contents;
+}
+
+panel.side .details .details-title {
+    grid-column: 1;
+
+    font-size: var(--fs-3);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+panel.side .details .details-content {
+    grid-column: 2;
+    align-self: end;
+
+    word-wrap: anywhere !important;
+    overflow-wrap: anywhere;
+
+    text-decoration: none;
+    color: var(--light-fg-color);
+}
+
+panel.side cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--visual-sz-unit) * 0.5);
+}
+
+panel.side cards .card-skill {
+    padding: calc(var(--visual-sz-unit) * 0.3);
+
+    font-weight: var(--fw-medium);
+
+    background-color: var(--primary-lighter-bg-color);
+    color: var(--dark-fg-color);
+
+    border-radius: 4px;
+}
+
 footer {
 	height: 10vh;
 }
