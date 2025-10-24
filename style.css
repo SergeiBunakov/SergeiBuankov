@@ -32,10 +32,10 @@
     --preview-img-height: 614; /* px */
 
     --light-fg-color: #D0D3D4;
+    --dark-fg-color: rgb(12, 24, 32);
     --primary-bg-color: rgb(14, 32, 36);
-	--primary-ligher-bg-color: rgb(53, 68, 72);
-	--primary-light-bg-color: rgb(158, 184, 188);
-
+	--primary-light-bg-color: rgb(53, 68, 72);
+	--primary-lighter-bg-color: rgb(158, 184, 188);
 }
 
 *, html, body {
@@ -194,7 +194,7 @@ a.card-3d-model > .info {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--primary-ligher-bg-color);
+    background-color: var(--primary-light-bg-color);
     color: var(--light-fg-color);
     padding: calc(0.5 * var(--visual-unit-sz)) ;
     font-size: var(--fs-4);
