@@ -250,6 +250,7 @@ panel.side cards {
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--visual-sz-unit) * 0.5);
+    padding: calc(var(--visual-sz-unit) * 0.1);
 }
 
 panel.side cards .card-skill {
@@ -289,7 +290,6 @@ footer {
         max-width: 100%;
         width: 100%;
         right: auto;
-
     }
 
     panel.side .details {
@@ -299,6 +299,7 @@ footer {
     panel.side .details li {
         display: flex;
         flex-direction: column;
+        gap: calc(var(--visual-sz-unit)*0.1)
     }
 
     panel.side .details .details-title {
@@ -306,9 +307,8 @@ footer {
         font-size: var(--fs-5);
     }
 
-    panel.side .details a.details-content {
+    panel.side .details .details-content {
         font-size: var(--fs-6);
         align-self: auto;
     }
-
 }
