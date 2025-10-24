@@ -70,7 +70,8 @@ header {
 	height: 10vh;
 	display: flex;
 	align-items: center;
-	padding: 0 var(--visual-sz-unit);
+	padding: var(--visual-sz-unit);
+    box-sizing: border-box;
 
 	font-size: var(--fs-1);
 	color: var(--light-fg-color);
@@ -368,5 +369,12 @@ footer {
     panel.side .details .details-content {
         font-size: var(--fs-6);
         align-self: auto;
+    }
+}
+
+@media (max-height: 700px) {
+    header {
+        box-sizing: content-box;
+        padding: calc(var(--visual-sz-unit) * 0.6) var(--visual-sz-unit);
     }
 }
