@@ -136,18 +136,6 @@ panel.main > cards {
     overflow: hidden;
 }
 
-a.card:hover,
-a.card:focus-visible {
-  transform: translateY(-8px) scale(1.035);
-  box-shadow: 0 24px 40px rgba(0,0,0,0.6);
-  z-index: 5; /* bring above siblings */
-  outline: none;
-}
-
-.card:active {
-  transform: translateY(-4px) scale(1.02);
-}
-
 .card > .thumb-container {
     position: relative;
     flex: 1;
@@ -166,18 +154,8 @@ a.card:focus-visible {
     object-position: center;
 }
 
-.card > .thumb-container > img.thumb {
-  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
-  backface-visibility: hidden;
-}
-a.card:hover > .thumb-container > img.thumb,
-a.card:focus-visible > .thumb-container > img.thumb {
-  transform: scale(var(--zoom-in-scale-factor)) translateY(-2%);
-}
-
 .card > .info {
     z-index: 1;
-    width: 100%;
     box-sizing: border-box;
 
     display: flex;
@@ -193,8 +171,28 @@ a.card:focus-visible > .thumb-container > img.thumb {
     flex-direction: column;
 }
 
+.card-3d-model:hover,
+.card-3d-model:focus-visible {
+  transform: translateY(-8px) scale(1.035);
+  box-shadow: 0 24px 40px rgba(0,0,0,0.6);
+  z-index: 5;
+  outline: none;
+}
+
+.card-3d-model:active {
+  transform: translateY(-4px) scale(1.02);
+}
+
 .card-3d-model > .thumb-container {
     aspect-ratio: var(--preview-img-3dmodel-width)/var(--preview-img-3dmodel-height);
+}
+.card-3d-model > .thumb-container > img.thumb {
+  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
+  backface-visibility: hidden;
+}
+.card-3d-model:hover > .thumb-container > img.thumb,
+.card-3d-model:focus-visible > .thumb-container > img.thumb {
+  transform: scale(var(--zoom-in-scale-factor)) translateY(-2%);
 }
 
 .card-3d-model > .info {
