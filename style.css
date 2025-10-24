@@ -331,10 +331,6 @@ footer {
         border-radius: var(--border-radius-small);
     }
 
-    panel.main > cards {
-        grid-template-columns: 1fr;
-    }
-
     .card-animation {
         grid-template-columns: 1fr;
     }
@@ -354,6 +350,10 @@ footer {
 }
 
 @media (max-width: 520px) {
+    panel.main > cards {
+        grid-template-columns: 1fr;
+    }
+
     panel.side .details li {
         display: flex;
         flex-direction: column;
