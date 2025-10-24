@@ -200,6 +200,44 @@ panel.main > cards {
     padding: calc(0.5 * var(--visual-unit-sz)) ;
 }
 
+.card-animation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-animation > .thumb-container {
+    flex-grow: 1;
+    aspect-ratio: var(--preview-img-animation-width)/var(--preview-img-animation-height);
+}
+
+.card-animation > .thumb-container > img.thumb {
+  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
+  backface-visibility: hidden;
+}
+.card-animation:hover > .thumb-container > img.thumb,
+.card-animation:focus-visible > .thumb-container > img.thumb {
+  transform: scale(var(--zoom-in-scale-factor)) translateY(-2%);
+}
+
+.card-animation > .info {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: var(--visual-sz-unit);
+
+    padding: var(--visual-sz-unit);
+}
+
+.card-animation > .info > .title {
+    font-size: var(--fs-2);
+}
+
+.card-animation > .info > .description {
+}
+
 panel.side {
 	position: fixed;
     display:flex;
