@@ -109,6 +109,7 @@ panel.main > .title {
     font-size: var(--fs-1);
     font-weight: 600;
     color: var(--dark-fg-color);
+    margin: var(--visual-sz-unit) 0;
 
     font-style: italic;
 }
