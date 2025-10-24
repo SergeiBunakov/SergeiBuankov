@@ -21,6 +21,7 @@
     --border-circle: 50%;
 
 	--side-panel-width: 15vw;
+    --zoom-in-scale-factor: 1.3;
 
     --preview-img-width: 854; /* px */
     --preview-img-height: 614; /* px */
@@ -146,7 +147,7 @@ a.card-3d-model > .thumb-container {
     aspect-ratio: var(--preview-img-width)/var(--preview-img-height);
 }
 
-A.card-3d-model > .thumb-container > img.thumb {
+a.card-3d-model > .thumb-container > img.thumb {
     position: absolute;
     top: 0;
     left: 0;
@@ -155,6 +156,15 @@ A.card-3d-model > .thumb-container > img.thumb {
 
     object-fit: cover;
     object-position: center;
+}
+
+a.card-3d-model > .thumb-container > img.thumb {
+  transition: transform 300ms cubic-bezier(.2,.8,.2,1);
+  backface-visibility: hidden;
+}
+a.card-3d-model:hover > .thumb-container > img.thumb,
+a.card-3d-model:focus-visible > .thumb-container > img.thumb {
+  transform: scale(var(--zoom-in-scale-factor)) translateY(-2%);
 }
 
 a.card-3d-model > .info {
