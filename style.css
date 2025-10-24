@@ -32,6 +32,9 @@
     --preview-img-3dmodel-height:   614;   /* px */
     --preview-img-animation-width:  1920;  /* px */
     --preview-img-animation-height: 1080;  /* px */
+    --embed-frame-width:            16;    /* units */
+    --embed-frame-height:           9;     /* units */
+
 
     --light-fg-color: #D0D3D4;
     --dark-fg-color: rgb(12, 24, 32);
@@ -244,6 +247,20 @@ panel.main > cards {
 .card-animation > .info > .description {
 }
 
+.sketchfab-embed-wrapper {
+    width: 100%;
+    height: 100%;
+
+    border-radius: var(--border-radius-small);
+
+    overflow: hidden;
+}
+
+.sketchfab-embed-wrapper > iframe {
+    aspect-ratio: var(--embed-frame-width)/var(--embed-frame-height);
+    width: 100%;
+}
+
 panel.side {
 	position: fixed;
     display:flex;
@@ -351,6 +368,11 @@ footer {
 }
 
 @media (max-width: 520px) {
+    :root {
+        --embed-frame-width:  3;  /* unit */
+        --embed-frame-height: 4;  /* unit */
+    }
+
     panel.main > cards {
         grid-template-columns: 1fr;
     }
