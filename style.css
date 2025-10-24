@@ -266,3 +266,49 @@ panel.side cards .card-skill {
 footer {
 	height: 10vh;
 }
+
+@media (max-width:520px) {
+    main {
+        flex-direction: column-reverse;
+        padding: 0 var(--visual-sz-unit);
+    }
+
+    panel.main > cards {
+        grid-template-columns: 1fr;
+    }
+
+    panel.main {
+        width: 100%;
+        border-radius: var(--border-radius-small);
+    }
+
+    panel.side {
+	    position: relative;
+
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        right: auto;
+
+    }
+
+    panel.side .details {
+        grid-template-columns: 1fr;
+    }
+
+    panel.side .details li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    panel.side .details .details-title {
+        white-space: normal;
+        font-size: var(--fs-5);
+    }
+
+    panel.side .details a.details-content {
+        font-size: var(--fs-6);
+        align-self: auto;
+    }
+
+}
