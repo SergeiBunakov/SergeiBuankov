@@ -86,7 +86,7 @@ main {
 }
 
 panel {
-	border-radius:  var(--border-radius);
+	border-radius:  var(--border-radius-small);
     box-sizing: border-box;
     padding: var(--visual-sz-unit);
 }
