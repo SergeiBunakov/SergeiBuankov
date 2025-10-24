@@ -103,9 +103,12 @@ panel.main {
 	background-color: var(--primary-lighter-bg-color);
 }
 
-panel > .title {
+panel.main > .title {
     font-size: var(--fs-1);
     font-weight: 600;
+    color: var(--dark-fg-color);
+
+    font-style: italic;
 }
 
 panel.main > cards {
@@ -202,6 +205,12 @@ panel.side {
 
 	background-color: var(--primary-light-bg-color);
     color: var(--light-fg-color);
+}
+
+panel.side > .title {
+    font-weight: 600;
+    font-size: var(--fs-2);
+    font-style: italic;
 }
 
 footer {
