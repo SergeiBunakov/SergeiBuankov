@@ -16,6 +16,11 @@
 	--fs-5: 0.8rem;
 	--fs-6: 0.7rem;
 
+	--fw-bold:     700;
+	--fw-semibold: 600;
+	--fw-medium:   500;
+	--fw-regular:  400;
+
 	--border-radius: 1rem;
 	--border-radius-small: 0.5rem;
     --border-circle: 50%;
@@ -37,6 +42,18 @@
 	font-family: var(--default-font-family);
 	font-size: var(--fs-4);
 }
+
+.fw-bold     { font-weight: var(--fw-bold); }
+.fw-semibold { font-weight: var(--fw-semibold); }
+.fw-medium   { font-weight: var(--fw-medium); }
+.fw-regular  { font-weight: var(--fw-regular); }
+
+.fs-1 { font-size: var(--fs-1); }
+.fs-2 { font-size: var(--fs-2); }
+.fs-3 { font-size: var(--fs-3); }
+.fs-4 { font-size: var(--fs-4); }
+.fs-5 { font-size: var(--fs-5); }
+.fs-6 { font-size: var(--fs-6); }
 
 body {
 	background-color: var(--primary-bg-color);
