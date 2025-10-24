@@ -25,7 +25,7 @@
 	--border-radius-small: 0.5rem;
     --border-circle: 50%;
 
-	--side-panel-width: 15vw;
+	--side-panel-width: 25vw;
     --zoom-in-scale-factor: 1.3;
 
     --preview-img-width: 854; /* px */
@@ -100,19 +100,7 @@ panel.main {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 
-	background-color: var(--primary-light-bg-color);
-}
-
-panel.side {
-	min-width: var(--side-panel-width);
-	max-width: var(--side-panel-width);
-
-	height: fit-content;
-	min-height: 60vh;
-	position: fixed;
-	right: var(--visual-sz-unit);
-
-	background-color: var(--primary-ligher-bg-color);
+	background-color: var(--primary-lighter-bg-color);
 }
 
 panel > .title {
@@ -198,6 +186,22 @@ a.card-3d-model > .info {
     color: var(--light-fg-color);
     padding: calc(0.5 * var(--visual-unit-sz)) ;
     font-size: var(--fs-4);
+}
+
+panel.side {
+	position: fixed;
+    display:flex;
+    flex-direction: column;
+    gap: var(--visual-sz-unit);
+
+	min-width: var(--side-panel-width);
+	max-width: var(--side-panel-width);
+	height: fit-content;
+
+	right: var(--visual-sz-unit);
+
+	background-color: var(--primary-light-bg-color);
+    color: var(--light-fg-color);
 }
 
 footer {
