@@ -253,7 +253,7 @@ panel.main > cards {
 .card-animation > .info > .description {
 }
 
-.sketchfab-embed-wrapper {
+.embedded-frame {
     width: 100%;
     height: 100%;
 
@@ -262,7 +262,7 @@ panel.main > cards {
     overflow: hidden;
 }
 
-.sketchfab-embed-wrapper > iframe {
+.embedded-frame > iframe {
     aspect-ratio: var(--embed-frame-width)/var(--embed-frame-height);
     width: 100%;
 }
