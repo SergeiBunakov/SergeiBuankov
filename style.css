@@ -80,6 +80,13 @@ header {
 	color: var(--light-fg-color);
 }
 
+
+.header-logo {
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+	color: var(--light-fg-color);
+}
+
 site-wrapper {
 	min-height: 90vh;
 	width: 100%;
