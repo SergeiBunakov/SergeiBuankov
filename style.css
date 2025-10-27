@@ -170,6 +170,7 @@ panel.main > cards {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: var(--visual-sz-unit);
 
     background-color: var(--primary-light-bg-color);
     color: var(--light-fg-color);
@@ -236,8 +237,6 @@ panel.main > cards {
     align-items: start;
     justify-content: start;
     gap: var(--visual-sz-unit);
-
-    padding: var(--visual-sz-unit);
 }
 
 .card-animation > .info > .title {
