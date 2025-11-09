@@ -145,6 +145,10 @@ panel.main section {
     font-style: italic;
 }
 
+.section-about {
+	line-height: 1.3rem;
+}
+
 /* Generic cards styles */
 .card {
     display: flex;
