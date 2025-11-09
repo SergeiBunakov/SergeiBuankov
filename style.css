@@ -145,8 +145,12 @@ panel.main section {
     font-style: italic;
 }
 
-.section-about {
+.text {
 	line-height: 1.3rem;
+}
+
+.section-about .text {
+	width: 60%;
 }
 
 /* Generic cards styles */
@@ -426,6 +430,10 @@ img.irender {
         --embed-frame-width:  3;  /* unit */
         --embed-frame-height: 4;  /* unit */
     }
+
+	.section-about .text {
+		width: 100%;
+	}
 
 	.section-3d-models cards {
         grid-template-columns: 1fr;
