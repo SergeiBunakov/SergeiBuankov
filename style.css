@@ -43,9 +43,10 @@
 	--primary-lighter-bg-color: rgb(158, 184, 188);
 }
 
-*, html, body {
+html, body {
 	font-family: var(--default-font-family);
 	font-size: var(--fs-4);
+    color: var(--dark-fg-color);
 }
 
 .fw-bold     { font-weight: var(--fw-bold) !important;     }
@@ -333,6 +334,7 @@ panel.side > .title {
     font-weight: var(--fw-bold);
     font-size: var(--fs-1);
     font-style: italic;
+    color: inherit;
 }
 
 panel.side .details {
