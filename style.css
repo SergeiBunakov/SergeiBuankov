@@ -60,6 +60,14 @@
 .fs-5 { font-size: var(--fs-5) !important; }
 .fs-6 { font-size: var(--fs-6) !important; }
 
+.bg-primary {
+    background-color: var(--primary-bg-color) !important;
+}
+
+.fg-light {
+    color: var(--light-fg-color) !important;
+}
+
 .flex-column {
     display: flex !important;
     flex-direction: column !important;
@@ -151,6 +159,10 @@ panel.main section {
 
 .section-about .text {
 	width: 60%;
+}
+
+.section-showcase-item-about .section-title {
+    margin-bottom: 0;
 }
 
 /* Generic cards styles */
@@ -370,7 +382,7 @@ panel.side cards {
     padding: calc(var(--visual-sz-unit) * 0.1);
 }
 
-panel.side cards .card-skill {
+.card-skill {
     padding: calc(var(--visual-sz-unit) * 0.3);
 
     font-weight: var(--fw-medium);
