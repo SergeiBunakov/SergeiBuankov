@@ -63,6 +63,10 @@
     cursor: pointer;
 }
 
+.slider-nav .slider-navitem:hover {
+    background-color: var(--navitem-active-color);
+}
+
 .slider-nav .slider-navitem-active {
     background-color: var(--navitem-active-color);
 }
