@@ -150,11 +150,12 @@ panel.main section {
 }
 
 .text {
-	line-height: 1.3rem;
+    font-size: var(--fs-3);
+	line-height: 2rem;
 }
 
 .section-about .text {
-	width: 60%;
+	width: 100%;
 }
 
 .section-showcase-item-about .section-title {
@@ -250,7 +251,6 @@ cards.cards-rows .card > .info {
     min-height: 50px;
     padding: calc(0.5 * var(--visual-sz-unit));
 }
-
 
 cards.cards-stack {
 	display: flex;
@@ -454,8 +454,9 @@ img.irender {
         --embed-frame-height: 4;  /* unit */
     }
 
-	.section-about .text {
-		width: 100%;
+	.text {
+		font-size: var(--fs-4);
+        line-height: 1.33rem;
 	}
 
 	.section-3d-models cards {
