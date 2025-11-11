@@ -37,10 +37,12 @@ class Slider {
 
   addItems(items) {
     this.items = this.items.concat(items);
-    this.redraw();
+    this.render();
   }
 
-  redraw() {
+  // TODO: Do not re-render everytime, instead move the track of the images
+  //       with css.
+  render() {
     this.sliderContainerEl.innerHTML = "";
     this.sliderContainerEl.classList.add("slider");
     this.navContainerEl.innerHTML = "";
@@ -64,9 +66,12 @@ class Slider {
   }
 
   move(toIndex) {
-    console.log("TRACE:", toIndex);
-    this.currentIndex = (toIndex < 0) ? this.items.length + (toIndex % this.items.length) : toIndex % this.items.length;
-    this.redraw();
+    let newIndex = toIndex % this.items.length;
+    if (newIndex < 0) newIndex += this.items.length;
+    if (newIndex != this.currentIndex) {
+      this.currentIndex = newIndex;
+      this.render();
+    }
   }
 
   prev() {
