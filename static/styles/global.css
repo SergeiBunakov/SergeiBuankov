@@ -389,6 +389,25 @@ footer {
 	height: 10vh;
 }
 
+/* slider */
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    align-items: center;
+}
+
+#renders-slider {
+    aspect-ratio: var(--preview-img-3dmodel-width)/var(--preview-img-3dmodel-height);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.slider-controls > .swipe-btn {
+    font-size: var(--fs-1);
+    color: var(--light-fg-color);
+}
+
 /* showcase-item page */
 .renders {
     width: 100%;
