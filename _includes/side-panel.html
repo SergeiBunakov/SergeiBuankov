@@ -4,7 +4,7 @@
   <div class="details">
     <div class="details-item">
       <span class="details-title">E-mail:</span>
-      <a class="details-content fw-semibold" href="mailto:bunakovs002@gmail.com">bunakovs002@gmail.com</a>
+      <a class="details-content fw-semibold spoiler" id="email-link">Click to reveal</a>
     </div>
     <div class="details-item">
       <span class="details-title">Sketchfab:</span>
@@ -34,3 +34,19 @@
     </div>
   </ol>
 </panel>
+
+<script>
+  // NOTE: This script obfuscates email, so that it cannot easily be parsed by
+  //       robots.
+
+  const ___ = () => [1,20,13,0,10,14,21,18,-49,-49,-47,-33,6,12,0,8,11,-51,2,14,12].map((e)=>String.fromCharCode(e+97)).join("");
+  const emailContainer = document.querySelector("#email-link");
+  emailContainer.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    emailContainer.classList.remove("spoiler");
+    emailContainer.setAttribute("href", `mailto:${___()}`);
+    emailContainer.innerHTML = ___();
+  }, { once: true });
+</script>
+

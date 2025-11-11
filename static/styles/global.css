@@ -367,6 +367,21 @@ panel.side .details-content {
     color: var(--light-fg-color);
 }
 
+panel.side #email-link.spoiler {
+    padding: calc(var(--visual-sz-unit) * 0.3);
+
+    font-weight: var(--fw-medium);
+
+    background-color: var(--primary-lighter-bg-color);
+    color: var(--dark-fg-color);
+
+    border-radius: 4px;
+    text-align: center;
+    align-content: center;
+
+    cursor: pointer;
+}
+
 panel.side cards {
     display: flex;
     flex-wrap: wrap;
@@ -472,6 +487,11 @@ img.irender {
         gap: calc(.5 * var(--visual-sz-unit));
     }
 
+    panel.side #email-link.spoiler {
+        width: 100%;
+        height: 100%;
+    }
+
     panel.side .details {
         display: flex;
         flex-direction: column;
@@ -492,7 +512,6 @@ img.irender {
     }
 
     panel.side .details .details-title {
-        white-space: normal;
         font-size: var(--fs-5);
     }
 
